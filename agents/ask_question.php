@@ -13,7 +13,7 @@ if (!$course = $DB->get_record('course', array('id' => $id))) {
 }
 
 require_login($course);
-$PAGE->set_url('/ask_question.php', array('id' => $cm->id));
+$PAGE->set_url('/ask_question.php', array('id' => $id));
 $PAGE->set_pagelayout('standard');
 $PAGE->set_title($COURSE->fullname);
 $PAGE->set_heading($COURSE->fullname);
