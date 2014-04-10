@@ -57,7 +57,7 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
     </form>
 
 
-    <?
+    <?php
     if (isset($_POST['submit'])) {
 
         if (($question != "") && ($answer != "")) {
@@ -89,7 +89,7 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
         <td style="border:solid 1px black;"><strong>Atsakymas</strong></td>
         <td> </td>
     </tr>
- <?   for($i=0; $i<count($questionsdb); $i++){
+ <?php   for($i=0; $i<count($questionsdb); $i++){
     echo '<tr style="border:solid 1px black;">';
     echo '<td style="border:solid 1px black;">'.$questionsdb[$i]->question;'</a></td>';
     echo '<td style="border:solid 1px black;">'.$questionsdb[$i]->answer;'</td>';
@@ -99,6 +99,6 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
  ?>
 </table>
 
-<?    
+<?php    
     echo $OUTPUT->footer();
 }
