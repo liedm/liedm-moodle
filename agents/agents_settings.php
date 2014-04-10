@@ -12,7 +12,7 @@
 	}
 	
 require_login($course);
-$PAGE->set_url('/question.php', array('id' => $cm->id)); 
+$PAGE->set_url('/agents_settings.php', array('id' => $cm->id)); 
 $PAGE->set_pagelayout('standard');
 $PAGE->set_title($COURSE->fullname);
 $PAGE->set_heading($COURSE->fullname); 
@@ -296,8 +296,7 @@ $settings = $DAL->GetSettings($userid, $crs);
 
 </form>
 
-<?
-
+<?php
 
 
 echo $OUTPUT->footer();
