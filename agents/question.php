@@ -10,14 +10,13 @@ if (!$course = $DB->get_record('course', array('id' => $id))) {
 }
 
 require_login($course);
-$PAGE->set_url('/question.php', array('id' => $cm->id));
+$PAGE->set_url('/question.php', array('id' => $id));
 $PAGE->set_pagelayout('standard');
 $PAGE->set_title($COURSE->fullname);
 $PAGE->set_heading($COURSE->fullname);
 $PAGE->navbar->add(get_string('addnewfaq', 'block_agents_for_teacher'), new moodle_url('../agents/question.php?id=' . $_GET['id']));
 
-$question = $_POST['question'];
-$answer = $_POST['answer'];
+
 $crs = $id;
 $userid = $USER->id;
 
@@ -59,6 +58,9 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
 
     <?php
     if (isset($_POST['submit'])) {
+        
+        $question = $_POST['question'];
+        $answer = $_POST['answer'];
 
         if (($question != "") && ($answer != "")) {
 
