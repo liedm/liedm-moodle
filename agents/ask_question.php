@@ -101,7 +101,7 @@ if (isset($_POST["question"])) {
 
     </form>
 
-    <?
+    <?php
 }//end else
 echo $OUTPUT->footer();
 ?>
