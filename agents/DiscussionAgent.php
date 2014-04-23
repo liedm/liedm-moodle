@@ -19,10 +19,12 @@ class DiscussionAgent {
         for ($i = 0; $i < count($user); $i++) {
             $user[$i]->posts = $this->db->FillUserPosts($id, $user[$i]->id);
             $total = 0;
+            if (($user[$i]->posts) != NULL) {
             foreach ($user[$i]->posts as $post){
                 $total += $post->total_post_count;
             }
             $user[$i]->total_post_count = $total;
+            }
         }
         return $user;
     }
