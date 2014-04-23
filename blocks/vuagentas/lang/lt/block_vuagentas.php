@@ -11,9 +11,9 @@ $string['blockstring'] = 'Block string';
 
 
 $string['labelcourseheader'] = 'Kurso parametrai';
-$string['desccourseheader'] = 'Nurodykite kiek elementų privalo kursas turėti.';
+$string['desccourseheader'] = 'Nurodykite kiek elementų kursas privalo turėti.';
 $string['labelsectionheader'] = 'Sekcijų parametrai';
-$string['descsectionheader'] = 'Toliau nurodykite kiek elementų privalo kiekviena sekciją turėti.';
+$string['descsectionheader'] = 'Toliau nurodykite kiek elementų kiekviena sekcija privalo turėti.';
 
 
 $string['labelsekcijos'] = 'Sekcijų skaičius';
@@ -56,9 +56,9 @@ $string['newblock:myaddinstance'] = 'Add a newblock block to my moodle';
 $string['noforum'] = 'Kurse nepanaudotas asinchroninio bendravimo įrankis – diskusijos.';
 $string['noforum_help'] = 'Siūlome besimokančiųjų suaktyvinimui naudoti forumus. Juose galime diskutuoti, leisti pasisakyti studentams bei aptarinėti įvairias veiklas.';
 $string['noglossary'] = "Kurse nepanaudotas žodyno įrankis.";
-$string['noglossary_help'] = "Žodynuose galima paskelbti nežinomus žodžius ir jų paaiškinimus ne tik tekstu, bet ir paveiksliukais, video failais. Sudaroma galimybė į žodyną įvestus žodžius atvaizduoti mokomojoje medžiagoje. Tai padeda studentams mokantis. Žodynai yra rekomenduojami kiekviename kurse.";
+$string['noglossary_help'] = "Žodynuose galima paskelbti nežinomus žodžius ir jų paaiškinimus ne tik tekstu, bet ir paveiksliukais, video failais. Sudaroma galimybė mokomojoje medžiagoje atvaizduoti į žodyną įvestus žodžius. Tai padeda studentams mokantis. Žodynai yra rekomenduojami kiekviename kurse.";
 $string['nochat'] = 'Kurse nepanaudotas sinchroninio bendravimo įrankis – pokalbių kambarys.';
-$string['nochat_help'] = 'Pokalbių kambarys rekomenduojamas, norint tiesiogiai pabendrauti su nutolusiais vartotojais, teikiant konsultacijas. Pokalbių kambarys rekomenduojamas taikant nuotolinį mokymo metodą.';
+$string['nochat_help'] = 'Pokalbių kambarys rekomenduojamas norint tiesiogiai pabendrauti su nutolusiais vartotojais, teikiant konsultacijas. Pokalbių kambarys rekomenduojamas taikant nuotolinį mokymo metodą.';
 $string['nopage'] = 'Kurse nepanaudotas medžiagos pateikimo būdas - HTML puslapių kūrimo įrankis.';
 $string['nopage_help'] = 'HTML puslapiuose yra galimybė įterpti dinaminius objektus, tokius kaip paveikslai, diagramos, video bei muzikinius failus, atsiranda galimybė naudotis visomis žodyno savybėmis. Rekomenduojame mokymo medžiagą skelbti ne PDF, o HTML failuose.';
 $string['noquiz'] = 'Nepanaudotas žinių patikrinimo įrankis  - testas.';
@@ -66,7 +66,7 @@ $string['noquiz_help'] = 'Testavimo įrankis labai svarbus kurse. Jo pagalba gal
 $string['noppt'] = 'Kurse nepanaudotas medžiagos pateikimo būdas – skaidrės. ';
 $string['noppt_help'] = 'Skaidres rekomenduojama pateikti po kiekvienos paskaitos. Jos padeda studentams prisiminti kas buvo kalbėta paskaitose, kokios temos buvo nagrinėtos. Jei naudojatės išmaniąja lenta – rekomenduojama pateikti kiekvienos paskaitos skaidres su dėstytojo komentarais, pastabomis.';
 $string['novideo'] = 'Kurse nepanaudotas medžiagos pateikimo būdas – video medžiaga.';
-$string['novideo_help'] = 'Vaizdo medžiaga palengvina temos supratimą. Patartina naudoti trumpus (5-14 min.) vaizdo įrašus. Juose galima paaiškinti konkrečia tema, sudėtingesnį atvejį, pademonstruoti ekrano vaizdą, konkrečios programos veikimo principus ar pan. Galimas ir trumpas kiekvienos temos pristatymo vaizdo įrašas.';
+$string['novideo_help'] = 'Vaizdo medžiaga palengvina temos supratimą. Patartina naudoti trumpus (5-14 min.) vaizdo įrašus. Juose galima paaiškinti konkrečią temą, sudėtingesnį atvejį, pademonstruoti ekrano vaizdą, konkrečios programos veikimo principus ar pan. Galimas ir trumpas kiekvienos temos pristatymo vaizdo įrašas.';
 $string['noexternallink'] = 'Kurse nepanaudotas medžiagos pateikimo būdas – išorinės nuorodos.';
 $string['noexternallink_help'] = 'Išorinės nuorodos į mokymo šaltinius, straipsnius, vaizdinę medžiagą leidžia praplėsti kursą, panaudoti daugiau galimybių. Nuorodos gali padėti studentui akimirksniu pasiekti reikiamą papildomą medžiagą: teisės aktus, straipsnius su naujausiais tyrimais Jūsų nagrinėjama tema, vaido failus Youtube ar pan. Išorinės nuorodos rekomenduojamos kiekvienoje temoje.';
 
