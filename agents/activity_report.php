@@ -71,34 +71,55 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
         echo '<p><a style="cursor: pointer;" onClick="SwitchContent(' . $i . ');"><img id="studentSwitch' . $i . '" src="../pix/t/switch_plus.png"></a><strong>' . $posts[$i]->first_name . ' ' . $posts[$i]->last_name . '</strong></p>';
         echo '<div id=content' . $i . ' style="display:none">';
         echo '<table><tbody>';
+		
+		if (($posts[$i]->posts) != NULL) {
+		
         echo '<tr ><td colspan="2"><strong><i>Pasisakymų skaičius diskusijų forumuose</strong></i></td></tr>';
-        foreach ($posts[$i]->posts as $post) {
+	 foreach ($posts[$i]->posts as $post) {
             echo '<tr style="border:solid 1px black;"><td style="border:solid 1px black;">' . $post->forum_name . '</td><td style="border:solid 1px black;">' . $post->total_post_count . '</td></tr>';
-            foreach ($post->discussions as $discussion) {
+	 } 
+			if (($post->discussions) != NULL) {
+			
+			foreach ($post->discussions as $discussion) {
                 echo '<tr style="font-style:italic; border:solid 1px black;"><td style="padding-left: 20px; border:solid 1px black;">' . $discussion->discussion_name . '</td><td style="border:solid 1px black;">' . $discussion->post_count . '</td></tr>';
-            }
-        }
+           	 }
+			}
+        
 
         echo '<tr><td style="border:solid 1px black; text-align: right;"><strong>Viso pasisakymų diskusijose:</strong></td><td style="border:solid 1px black;"><strong>' . $posts[$i]->total_post_count . '</strong></td></tr>';
         echo '<tr><td></td><td></td></tr>';
-        echo '<tr><td colspan="2"><strong><i>Pasisakymų skaičius pokalbių svetainėse</i></strong></td></tr>';
+		} else {
+                    echo '<strong>Studentas nėra pasiskakęs diskusijų forumuose.</strong></br>';
+                }
+        
+		if (($count_chats[$i]->chats) != NULL) {
+			
+		echo '<tr><td colspan="2"><strong><i>Pasisakymų skaičius pokalbių svetainėse</i></strong></td></tr>';
+		
         foreach ($count_chats[$i]->chats as $chat1) {
             echo '<tr style="border:solid 1px black;"><td style="border:solid 1px black; text-align: left;">' . $chat1->chat_name . '</td><td>' . $chat1->msg_count . '</td></tr>';
         }
+		
         echo '<tr style="border:solid 1px black;"><strong><td style="border:solid 1px black; text-align: right;"><strong>Viso pasisakymų pokalbių svetainėse:</strong></td><td><strong>' . $count_chats[$i]->total_msg_count . '</strong></td></tr>';
         echo '<tr><td></td><td></td></tr>';
-
+		} else {
+                    echo '<strong>Studentas nėra pasisakęs pokalbių svetainėse.</strong></br>';
+                }
         $question_count = $DAL->QuestionsAsked($id, $posts[$i]->id);
 
         if ($question_count != NULL) {
             echo '<tr><td><strong><i>Dėstytojui užduotų klausimų skaičius:</i></strong></td><td><strong>' . $question_count . '</strong></td></tr>';
         } else {
-            echo '<tr><td><strong><i>Dėstytojui užduotų klausimų skaičius:</i></strong></td><td><strong>0</strong></td></tr>';
+            echo '<strong>Studentas nėra uždavęs dėstytojui klausimų.</strong></br>';
         }
 
         echo '<tr><td></td><td></td></tr>';
+		
+		if (($grades[$i]->modules) != NULL) {
+		
         echo '<tr><td colspan="2"><strong><i>Studento įvertinimai</i></strong></tr>';
-        foreach ($grades[$i]->modules as $grade) {
+		
+		foreach ($grades[$i]->modules as $grade) {
             echo '<tr style="border:solid 1px black;"><td style="border:solid 1px black;">' . $grade->item_name . '</td><td style="border:solid 1px black;">';
             if ($grade->grade != '') {
                 echo $grade->grade;
@@ -106,7 +127,11 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
                 echo '-';
             }'</td></tr>';
         }
+		
         echo '<tr><td style="border:solid 1px black; text-align: right;"><strong>Kurso įvertinimas</strong></td><td style="border:solid 1px black;">' . $grades[$i]->course_grade . '</td></tr>';
+		} else {
+			echo '<strong>Studentas įvertinimų neturi.</strong></br>';
+		}
         echo '</tbody></table>';
         echo '</div>';
     }
