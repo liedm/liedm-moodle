@@ -73,12 +73,12 @@ if (($roleid == 5) || ($roleid == 6) || ($roleid == 7) || ($roleid == 8)) {
                 $DAL->InsertQuestion($question, $answer, $crs);
                
                 
-                echo '<p align="center">The question has been successfully added to FAQ.</p>';
+                echo '<p align="center">Klausimas sėkmingai įtrauktas į DUK.</p>';
             } else {
-                echo '<p style="text-align:center;">This question already exists in database.</p>';
+                echo '<p style="text-align:center; color: red;">Šis klausimas duomenų bazėje jau yra.</p>';
             }
         } else {
-            echo '<p align="center" style="color: red;"><strong>Type question and answer.</strong></p>';
+            echo '<p align="center" style="color: red;"><strong>Įveskite klausimą bei atsakymą.</strong></p>';
         }
     }
     
